@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		103CAFD124F6C25300FE8E1A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 103CAFD024F6C25300FE8E1A /* GoogleService-Info.plist */; };
+		103CAFD324F6C6AE00FE8E1A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD224F6C6AE00FE8E1A /* LoginViewController.swift */; };
+		103CAFD524F6C70900FE8E1A /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD424F6C70900FE8E1A /* RegistrationViewController.swift */; };
+		103CAFD824F6DD4600FE8E1A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */; };
+		103CAFDA24F6E19100FE8E1A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD924F6E19100FE8E1A /* AuthManager.swift */; };
+		103CAFDC24F6E1B400FE8E1A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */; };
 		10ABCAEE24F42808002840CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAED24F42808002840CA /* AppDelegate.swift */; };
 		10ABCAF024F42808002840CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAEF24F42808002840CA /* SceneDelegate.swift */; };
 		10ABCAF224F42808002840CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAF124F42808002840CA /* HomeViewController.swift */; };
@@ -50,6 +56,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		103CAFD024F6C25300FE8E1A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		103CAFD224F6C6AE00FE8E1A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		103CAFD424F6C70900FE8E1A /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		103CAFD924F6E19100FE8E1A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		10ABCAEA24F42808002840CA /* InstagramCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10ABCAED24F42808002840CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10ABCAEF24F42808002840CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +127,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		103CAFD624F6C9A600FE8E1A /* General */ = {
+			isa = PBXGroup;
+			children = (
+				10ABCB3024F43CE0002840CA /* EditProfileViewController.swift */,
+				10ABCB3224F43CF2002840CA /* SettingsViewController.swift */,
+				10ABCB3424F43CFC002840CA /* ListViewController.swift */,
+				10ABCB3624F43D0E002840CA /* SearchViewController.swift */,
+				10ABCB3824F43D59002840CA /* SearchResultViewController.swift */,
+				10ABCB3A24F43DA7002840CA /* PostEditorViewController.swift */,
+				10ABCB3C24F43DB9002840CA /* PublishPostViewController.swift */,
+				10ABCB2E24F43C8C002840CA /* PostViewController.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
 		10ABCAE124F42808002840CA = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +206,10 @@
 			children = (
 				10ABCAED24F42808002840CA /* AppDelegate.swift */,
 				10ABCAEF24F42808002840CA /* SceneDelegate.swift */,
+				103CAFD024F6C25300FE8E1A /* GoogleService-Info.plist */,
+				103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */,
+				103CAFD924F6E19100FE8E1A /* AuthManager.swift */,
+				103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -225,6 +256,7 @@
 		10ABCB2C24F43C56002840CA /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				103CAFD624F6C9A600FE8E1A /* General */,
 				10ABCB2D24F43C63002840CA /* Onboarding */,
 			);
 			path = Others;
@@ -233,14 +265,8 @@
 		10ABCB2D24F43C63002840CA /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
-				10ABCB2E24F43C8C002840CA /* PostViewController.swift */,
-				10ABCB3024F43CE0002840CA /* EditProfileViewController.swift */,
-				10ABCB3224F43CF2002840CA /* SettingsViewController.swift */,
-				10ABCB3424F43CFC002840CA /* ListViewController.swift */,
-				10ABCB3624F43D0E002840CA /* SearchViewController.swift */,
-				10ABCB3824F43D59002840CA /* SearchResultViewController.swift */,
-				10ABCB3A24F43DA7002840CA /* PostEditorViewController.swift */,
-				10ABCB3C24F43DB9002840CA /* PublishPostViewController.swift */,
+				103CAFD224F6C6AE00FE8E1A /* LoginViewController.swift */,
+				103CAFD424F6C70900FE8E1A /* RegistrationViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -255,7 +281,6 @@
 				BB04F5C84DFB02BB20DC5E66 /* Pods-InstagramCloneAppTests.debug.xcconfig */,
 				6CEBCA9BCBE221ED5287B18D /* Pods-InstagramCloneAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -379,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10ABCAFA24F4280E002840CA /* LaunchScreen.storyboard in Resources */,
+				103CAFD124F6C25300FE8E1A /* GoogleService-Info.plist in Resources */,
 				10ABCAF724F4280E002840CA /* Assets.xcassets in Resources */,
 				10ABCAF524F42808002840CA /* Main.storyboard in Resources */,
 			);
@@ -515,11 +541,16 @@
 				10ABCB3324F43CF2002840CA /* SettingsViewController.swift in Sources */,
 				10ABCAF224F42808002840CA /* HomeViewController.swift in Sources */,
 				10ABCB3524F43CFC002840CA /* ListViewController.swift in Sources */,
+				103CAFDC24F6E1B400FE8E1A /* StorageManager.swift in Sources */,
 				10ABCB3724F43D0E002840CA /* SearchViewController.swift in Sources */,
+				103CAFD824F6DD4600FE8E1A /* DatabaseManager.swift in Sources */,
+				103CAFD524F6C70900FE8E1A /* RegistrationViewController.swift in Sources */,
 				10ABCB2824F43AF3002840CA /* NotificationsViewController.swift in Sources */,
 				10ABCB2A24F43B05002840CA /* ProfileViewController.swift in Sources */,
 				10ABCB3D24F43DB9002840CA /* PublishPostViewController.swift in Sources */,
 				10ABCAEE24F42808002840CA /* AppDelegate.swift in Sources */,
+				103CAFDA24F6E19100FE8E1A /* AuthManager.swift in Sources */,
+				103CAFD324F6C6AE00FE8E1A /* LoginViewController.swift in Sources */,
 				10ABCAF024F42808002840CA /* SceneDelegate.swift in Sources */,
 				10ABCB3924F43D59002840CA /* SearchResultViewController.swift in Sources */,
 				10ABCB3124F43CE0002840CA /* EditProfileViewController.swift in Sources */,
