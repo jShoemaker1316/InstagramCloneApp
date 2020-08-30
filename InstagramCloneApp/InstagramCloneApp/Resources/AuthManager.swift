@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import FirebaseDatabase
+import FirebaseAuth
 
 public class AuthManager {
 
