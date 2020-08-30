@@ -13,6 +13,7 @@
 		103CAFD824F6DD4600FE8E1A /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */; };
 		103CAFDA24F6E19100FE8E1A /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFD924F6E19100FE8E1A /* AuthManager.swift */; };
 		103CAFDC24F6E1B400FE8E1A /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */; };
+		1072848C24FBF4320072FC9F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1072848B24FBF4320072FC9F /* Extensions.swift */; };
 		10ABCAEE24F42808002840CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAED24F42808002840CA /* AppDelegate.swift */; };
 		10ABCAF024F42808002840CA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAEF24F42808002840CA /* SceneDelegate.swift */; };
 		10ABCAF224F42808002840CA /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10ABCAF124F42808002840CA /* HomeViewController.swift */; };
@@ -62,6 +63,7 @@
 		103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		103CAFD924F6E19100FE8E1A /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		1072848B24FBF4320072FC9F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		10ABCAEA24F42808002840CA /* InstagramCloneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCloneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10ABCAED24F42808002840CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10ABCAEF24F42808002840CA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				103CAFD724F6DD4600FE8E1A /* DatabaseManager.swift */,
 				103CAFD924F6E19100FE8E1A /* AuthManager.swift */,
 				103CAFDB24F6E1B400FE8E1A /* StorageManager.swift */,
+				1072848B24FBF4320072FC9F /* Extensions.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				103CAFD524F6C70900FE8E1A /* RegistrationViewController.swift in Sources */,
 				10ABCB2824F43AF3002840CA /* NotificationsViewController.swift in Sources */,
 				10ABCB2A24F43B05002840CA /* ProfileViewController.swift in Sources */,
+				1072848C24FBF4320072FC9F /* Extensions.swift in Sources */,
 				10ABCB3D24F43DB9002840CA /* PublishPostViewController.swift in Sources */,
 				10ABCAEE24F42808002840CA /* AppDelegate.swift in Sources */,
 				103CAFDA24F6E19100FE8E1A /* AuthManager.swift in Sources */,
@@ -729,6 +733,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstagramCloneApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -747,6 +752,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstagramCloneApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
