@@ -77,6 +77,11 @@ class RegistrationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        registerButton.addTarget(self, action: #selector(didTapRegister), for: .touchUpInside)
+        usernameField.delegate = self
+        emailField.delegate = self
+        passwordField.delegate = self
+        
         view.addSubview(usernameField)
         view.addSubview(emailField)
         view.addSubview(passwordField)
@@ -87,21 +92,40 @@ class RegistrationViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        usernameField.frame = CGRect(x: 20, y: view.safeAreaInsets.top+10, width: view.width-40, height: 52)
+        usernameField.frame = CGRect(x: 20, y: view.safeAreaInsets.top+100, width: view.width-40, height: 52)
         emailField.frame = CGRect(x: 20, y: usernameField.bottom+10, width: view.width-40, height: 52)
         passwordField.frame = CGRect(x: 20, y: emailField.bottom+10, width: view.width-40, height: 52)
         registerButton.frame = CGRect(x: 20, y: passwordField.bottom+10, width: view.width-40, height: 52)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc private func didTapRegister(){
+        emailField.resignFirstResponder()
+        usernameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        
+        guard let email = emailField.text, !email.isEmpty,
+            let password = passwordField.text, !password.isEmpty, password.count >= 8,
+            let username = usernameField.text, !username.isEmpty else {
+                return
+        }
+        
+        
     }
-    */
+    
 
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == usernameField {
+            emailField.becomeFirstResponder()
+        }
+        else if textField == emailField {
+            passwordField.becomeFirstResponder()
+        }
+        else {
+            didTapRegister()
+        }
+        return true
+    }
 }

@@ -13,8 +13,33 @@ public class AuthManager {
     
     static let shared = AuthManager()
 
-    public func registerNewUser(username: String, email: String, password: String) {
-
+    public func registerNewUser(username: String, email: String, password: String, completion: @escaping (Bool) -> Void) {
+        //check if username is available
+        
+        //check if email is available
+        
+        DatabaseManager.shared.canCreateNewUser(with: email, username: username) { canCreate in
+            if canCreate {
+                //create account
+                Auth.auth().createUser(withEmail: email, password: password) { result, error in
+                    guard error == nil, result != nil else {
+                        //Firebase auth could not create account
+                        completion(false)
+                        return
+                    }
+                    //Insert into database
+                    
+                    
+                }
+                
+            }
+            
+            else {
+                completion(false)
+            }
+            
+        }
+        
     }
 
     public func loginUser(username: String?, email: String?, password: String, completion: @escaping ((Bool) ->Void)) {
