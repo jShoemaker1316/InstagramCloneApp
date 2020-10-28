@@ -35,3 +35,10 @@ extension UIView {
         return frame.origin.x + frame.size.width
     }
 }
+
+extension String {
+    //to call for any string in database, "." arent allowed, so need to convert
+    func safeDatabaseKey() -> String {
+       return self.replacingOccurrences(of: ".", with: "-").replacingOccurrences(of: "@", with: "-")
+    }
+}
